@@ -1,6 +1,7 @@
 # bling.vim
 
 A highly tuned vim distribution that will blow your socks off!
+_Arkan's build_ - For original see [bling.vim](https://github.com/bling/dotvim)
 
 ## introduction
 
