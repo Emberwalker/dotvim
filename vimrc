@@ -139,7 +139,7 @@
 "}}}
 
 " base configuration {{{
-  set timeoutlen=300                                  "mapping timeout
+  set timeoutlen=700                                  "mapping timeout
   set ttimeoutlen=50                                  "keycode timeout
 
   set mouse=a                                         "enable mouse
