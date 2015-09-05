@@ -281,12 +281,12 @@
     set guioptions-=T                                 "toolbar icons
 
     if s:is_macvim
-      set gfn=Ubuntu_Mono:h14
+      set gfn=Hack:h11
       set transparency=2
     endif
 
     if s:is_windows
-      set gfn=Ubuntu_Mono:h10
+      set gfn=Hack:h12
     endif
 
     if has('gui_gtk')
@@ -557,6 +557,7 @@
     "}}}
     NeoBundleLazy 'majutsushi/tagbar', {'autoload':{'commands':'TagbarToggle'}} "{{{
       nnoremap <silent> <F9> :TagbarToggle<CR>
+      nnoremap <leader>t :TagbarToggle<CR>
     "}}}
   endif "}}}
   if count(s:settings.plugin_groups, 'unite') "{{{
