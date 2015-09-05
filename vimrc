@@ -730,6 +730,9 @@
   " toggle paste
   map <F6> :set invpaste<CR>:set paste?<CR>
 
+  " clear search highlights
+  map <leader>x :noh<CR>
+
   " remap arrow keys
   nnoremap <left> :bprev<CR>
   nnoremap <right> :bnext<CR>
