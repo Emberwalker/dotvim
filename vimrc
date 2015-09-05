@@ -878,6 +878,10 @@
   NeoBundle 'zeis/vim-kolor' "{{{
     let g:kolor_underlined=1
   "}}}
+  NeoBundle 'jordwalke/flatlandia'
+  NeoBundle 'CruizeMissile/Revolution.vim'
+  NeoBundle 'duythinht/inori'
+  NeoBundle 'xero/sourcerer.vim'
 "}}}
 
 " finish loading {{{
