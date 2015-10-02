@@ -3,18 +3,12 @@
 A highly tuned vim distribution that will blow your socks off!
 _Arkan's build_ - For original see [bling.vim](https://github.com/bling/dotvim)
 
-## introduction
-
-this is my ***personal*** vim distribution that i have tweaked over time and evolved from a simple vanilla vimrc configuration to a full-blown distribution that it is today.
-
-while it is very easy to install this and get up and running on a brand new machine (a use case i have), i recommend that you do not install this unless you fully understand everything that's going on inside.  scan it for tips and tricks, or fork and customize it for *your* needs.
-
 ## installation
 
 1.  clone this repository into your `~/.vim` directory
 1.  `git submodule init && git submodule update`
 1.  `mv ~/.vimrc ~/.vimrc.backup`
-1.  create the following shim and save it as `~/.vimrc`:
+1.  create the following shim and save it as `~/.vimrc` _(or use the one in dotfiles repo)_:
 
 ```
 let g:dotvim_settings = {}
