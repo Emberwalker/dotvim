@@ -142,7 +142,7 @@
   set timeoutlen=700                                  "mapping timeout
   set ttimeoutlen=50                                  "keycode timeout
 
-  set mouse=a                                         "enable mouse
+  set mouse=""                                        "disable mouse
   set mousehide                                       "hide when characters are typed
   set history=1000                                    "number of command lines to remember
   set ttyfast                                         "assume fast terminal connection
