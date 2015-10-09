@@ -89,7 +89,7 @@
   endif
   set rtp+=~/.vim/bundle/neobundle.vim
   call neobundle#begin(expand('~/.vim/bundle/'))
-  NeoBundleFetch 'Shougo/neobundle.vim'
+  NeoBundleFetch 'Shougo/neobundle.vim', {'type': 'nosync'}
 "}}}
 
 " functions {{{
@@ -502,6 +502,13 @@
     NeoBundle 'justinmk/vim-sneak' "{{{
       let g:sneak#streak = 1
     "}}}
+    NeoBundleLazy 'jeaye/color_coded', {
+          \ 'build': {
+          \    'unix': 'cmake . && make && make install',
+          \ },
+          \ 'autoload': { 'filetypes': ['c', 'cpp', 'objc', 'objcpp'] },
+          \ 'build_commands': ['cmake', 'make']
+          \}
   endif "}}}
   if count(s:settings.plugin_groups, 'navigation') "{{{
     NeoBundle 'mileszs/ack.vim' "{{{
