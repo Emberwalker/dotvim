@@ -885,6 +885,9 @@
     \  exe 'normal! g`"zvzz' |
     \ endif
 
+  " recognition of boot build files/configs as Clojure
+  autocmd BufNewFile,BufRead *.boot set filetype=clojure
+
   autocmd FileType js,scss,css autocmd BufWritePre <buffer> call StripTrailingWhitespace()
   autocmd FileType css,scss setlocal foldmethod=marker foldmarker={,}
   autocmd FileType css,scss nnoremap <silent> <leader>S vi{:sort<CR>
