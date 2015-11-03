@@ -887,6 +887,8 @@
 
   " recognition of boot build files/configs as Clojure
   autocmd BufNewFile,BufRead *.boot set filetype=clojure
+  " and the same with Gradle build files
+  autocmd BufNewFile,BufRead *.gradle set filetype=groovy
 
   autocmd FileType js,scss,css autocmd BufWritePre <buffer> call StripTrailingWhitespace()
   autocmd FileType css,scss setlocal foldmethod=marker foldmarker={,}
