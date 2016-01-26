@@ -44,6 +44,7 @@
     call add(s:settings.plugin_groups, 'scala')
     call add(s:settings.plugin_groups, 'go')
     call add(s:settings.plugin_groups, 'clojure')
+    call add(s:settings.plugin_groups, 'haskell')
     call add(s:settings.plugin_groups, 'scm')
     call add(s:settings.plugin_groups, 'editing')
     call add(s:settings.plugin_groups, 'indents')
@@ -424,6 +425,18 @@
     NeoBundle 'tpope/vim-fireplace'
     NeoBundle 'guns/vim-clojure-highlight'
     NeoBundle 'tpope/vim-salve'
+  endif "}}}
+  if count(s:settings.plugin_groups, 'haskell') "{{{
+    NeoBundle 'bitc/vim-hdevtools' "{{{
+      au FileType haskell nnoremap <buffer> <F1> :HdevtoolsType<CR>
+      au FileType haskell nnoremap <buffer> <silent> <F2> :HdevtoolsClear<CR>
+      au FileType haskell nnoremap <buffer> <silent> <F3> :HdevtoolsInfo<CR>
+    "}}}
+    NeoBundle 'eagletmt/ghcmod-vim' "{{{
+      map <silent> tu :call GHC_BrowseAll()<CR>
+      map <silent> tw :call GHC_ShowType(1)<CR>
+    "}}}
+    NeoBundle 'eagletmt/neco-ghc'
   endif "}}}
   if count(s:settings.plugin_groups, 'scm') "{{{
     NeoBundle 'mhinz/vim-signify' "{{{
