@@ -1,4 +1,4 @@
-" vim: fdm=marker ts=2 sts=2 sw=2 fdl=0
+" vim: expandtab fdm=marker ts=2 sts=2 sw=2 fdl=0
 
 " detect OS {{{
   let s:is_windows = has('win32') || has('win64')
@@ -410,6 +410,7 @@
     NeoBundle 'megaannum/vimside'
   endif "}}}
   if count(s:settings.plugin_groups, 'go') "{{{
+    NeoBundle 'fatih/vim-go', {'autoload': {'filetypes':['go']}}
     NeoBundleLazy 'jnwhiteh/vim-golang', {'autoload':{'filetypes':['go']}}
     NeoBundleLazy 'nsf/gocode', {'autoload': {'filetypes':['go']}, 'rtp': 'vim'}
   endif "}}}
@@ -595,6 +596,33 @@
     NeoBundleLazy 'majutsushi/tagbar', {'autoload':{'commands':'TagbarToggle'}} "{{{
       nnoremap <silent> <F9> :TagbarToggle<CR>
       nnoremap <leader>t :TagbarToggle<CR>
+      let g:tagbar_type_go = {
+        \ 'ctagstype' : 'go',
+        \ 'kinds'     : [
+            \ 'p:package',
+            \ 'i:imports:1',
+            \ 'c:constants',
+            \ 'v:variables',
+            \ 't:types',
+            \ 'n:interfaces',
+            \ 'w:fields',
+            \ 'e:embedded',
+            \ 'm:methods',
+            \ 'r:constructor',
+            \ 'f:functions'
+        \ ],
+        \ 'sro' : '.',
+        \ 'kind2scope' : {
+            \ 't' : 'ctype',
+            \ 'n' : 'ntype'
+        \ },
+        \ 'scope2kind' : {
+            \ 'ctype' : 't',
+            \ 'ntype' : 'n'
+        \ },
+        \ 'ctagsbin'  : 'gotags',
+      \ 'ctagsargs' : '-sort -silent'
+      \ }
     "}}}
   endif "}}}
   if count(s:settings.plugin_groups, 'unite') "{{{
