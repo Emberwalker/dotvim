@@ -241,8 +241,8 @@
     call EnsureExists(&directory)
   "}}}
 
-  let mapleader = ","
-  let g:mapleader = ","
+  let mapleader = "\\"
+  let g:mapleader = "\\"
 "}}}
 
 " ui configuration {{{
@@ -744,6 +744,8 @@
       let g:syntastic_style_error_symbol = '✠'
       let g:syntastic_warning_symbol = '∆'
       let g:syntastic_style_warning_symbol = '≈'
+      let g:syntastic_cpp_compiler = "clang++"
+      let g:syntastic_cpp_compiler_options = "-std=c++14 -Wall -Wextra -Wpedantic"
     "}}}
     NeoBundleLazy 'mattn/gist-vim', { 'depends': 'mattn/webapi-vim', 'autoload': { 'commands': 'Gist' } } "{{{
       let g:gist_post_private=1
