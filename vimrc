@@ -350,6 +350,8 @@
         \ 'windows': '"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\nmake.exe" make_msvc32.mak',
       \ },
     \ }
+    NeoBundle 'vim-airline/vim-airline-themes'
+    NeoBundle 'Konfekt/FastFold'
   endif "}}}
   if count(s:settings.plugin_groups, 'web') "{{{
     NeoBundleLazy 'groenewege/vim-less', {'autoload':{'filetypes':['less']}}
