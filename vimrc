@@ -42,6 +42,7 @@
     call add(s:settings.plugin_groups, 'ruby')
     call add(s:settings.plugin_groups, 'python')
     call add(s:settings.plugin_groups, 'scala')
+    call add(s:settings.plugin_groups, 'jvm')
     call add(s:settings.plugin_groups, 'go')
     call add(s:settings.plugin_groups, 'clojure')
     call add(s:settings.plugin_groups, 'haskell')
@@ -410,6 +411,11 @@
   if count(s:settings.plugin_groups, 'scala') "{{{
     NeoBundle 'derekwyatt/vim-scala'
     NeoBundle 'megaannum/vimside'
+  endif "}}}
+  if count(s:settings.plugin_groups, 'jvm') "{{{
+    NeoBundle 'tfnico/vim-gradle'
+    NeoBundle 'udalov/kotlin-vim'
+    NeoBundle 'vim-scripts/groovy.vim'
   endif "}}}
   if count(s:settings.plugin_groups, 'go') "{{{
     NeoBundle 'fatih/vim-go', {'autoload': {'filetypes':['go']}}
