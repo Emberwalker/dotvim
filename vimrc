@@ -46,6 +46,7 @@
     call add(s:settings.plugin_groups, 'go')
     call add(s:settings.plugin_groups, 'clojure')
     call add(s:settings.plugin_groups, 'haskell')
+    call add(s:settings.plugin_groups, 'erlang')
     call add(s:settings.plugin_groups, 'scm')
     call add(s:settings.plugin_groups, 'editing')
     call add(s:settings.plugin_groups, 'indents')
@@ -447,6 +448,13 @@
       map <silent> tw :call GHC_ShowType(1)<CR>
     "}}}
     call dein#add('eagletmt/neco-ghc')
+  endif "}}}
+  if count(s:settings.plugin_groups, 'erlang') "{{{
+    call dein#add('vim-erlang/vim-erlang-runtime')
+    call dein#add('vim-erlang/vim-erlang-compiler')
+    call dein#add('vim-erlang/vim-erlang-omnicomplete')
+    call dein#add('vim-erlang/vim-erlang-tags')
+    call dein#add('elixir-lang/vim-elixir')
   endif "}}}
   if count(s:settings.plugin_groups, 'scm') "{{{
     call dein#add('mhinz/vim-signify') "{{{
